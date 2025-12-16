@@ -1,13 +1,3 @@
-/*
-Sales Visualization Project
-Dataset: Online Retail II
-Tool: MySQL
-*/
-
-/* =========================
-   1. Data Cleaning
-========================= */
-
 -- حذف العملاء اللي معندهمش CustomerID
 DELETE FROM online_retali_raw
 WHERE customerid IS NULL;
@@ -51,4 +41,5 @@ SELECT HOUR(invoice_datetime) AS order_hour,
 FROM online_retali_raw
 GROUP BY order_hour
 ORDER BY order_hour;
+
 
